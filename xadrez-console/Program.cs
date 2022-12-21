@@ -1,8 +1,21 @@
-﻿using xadrez_console;
-using xadrez_console.tabuleiro;
+﻿using System;
+using tabuleiro;
+using xadrez_console;
+using xadrez_console.xadrez;
 
-Tabuleiro tab = new Tabuleiro(8, 8);
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Tabuleiro tab = new Tabuleiro(8, 8);
 
-Tela.imprimirTabuleiro(tab);
+        tab.colcoarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+        tab.colcoarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
+        tab.colcoarPeca(new Rei(tab, Cor.Preta), new Posicao(2, 4));
 
-Console.ReadLine();
+
+        Tela.imprimirTabuleiro(tab);
+
+        Console.ReadLine();
+    }
+}

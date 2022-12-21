@@ -1,10 +1,8 @@
-﻿using System;
-using tabuleiro;
-using xadrez_console.tabuleiro;
+﻿using tabuleiro;
 
 namespace xadrez_console
 {
-     class Tela
+    class Tela
     {
         public static void imprimirTabuleiro(Tabuleiro tab)
         {
